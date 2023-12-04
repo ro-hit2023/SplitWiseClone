@@ -1,13 +1,11 @@
 package com.rohit.splitwiseclone.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.HashMap;
+import java.util.List;
 
 @Entity(name = "SPLITWISE_GROUP")
 @AllArgsConstructor
@@ -19,6 +17,6 @@ public class Expense extends BaseModel {
     private Currency currency;
     @ManyToOne
     private Group group;
-    private HashMap<User, Double> paidUser;
-    private HashMap<User, Double> hasToPayUser;
+    @OneToMany
+    private List<UserExpense> userExpenses;
 }
