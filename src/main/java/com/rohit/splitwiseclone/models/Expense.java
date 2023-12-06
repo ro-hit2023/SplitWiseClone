@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 
 @Entity(name = "SPLITWISE_GROUP")
-@AllArgsConstructor
 @Data
 public class Expense extends BaseModel {
     private String description;

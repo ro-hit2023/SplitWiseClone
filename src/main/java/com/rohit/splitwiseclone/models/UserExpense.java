@@ -6,7 +6,6 @@ import lombok.Data;
 
 
 @Data
-@AllArgsConstructor
 @Entity(name = "SplitWise UserExpense")
 public class UserExpense extends BaseModel {
     @ManyToOne

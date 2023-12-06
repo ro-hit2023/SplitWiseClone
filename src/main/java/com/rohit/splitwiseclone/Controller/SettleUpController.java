@@ -20,5 +20,4 @@ public class SettleUpController {
         initService.initialise();
         return ResponseEntity.ok("Done");
     }
-
 }

@@ -22,9 +22,6 @@ public class User extends BaseModel {
     @ManyToMany
     private List<Group> groups;
 
-    public User() {
-
-    }
 }
 // Mapping
 // User to Expense --> 1 user can have many expenses and 1 expense can belong to may users --> ManyToMany
