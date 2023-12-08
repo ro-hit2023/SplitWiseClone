@@ -11,14 +11,13 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-@Entity
+@Entity(name = "SplitWise_User")
 @Builder
 public class User extends BaseModel {
     private String name;
     private String email;
     private String phoneNumber;
-    @ManyToMany
-    private List<Expense> expenses;
+
     @ManyToMany
     private List<Group> groups;
 

@@ -20,4 +20,9 @@ public class SettleUpController {
         initService.initialise();
         return ResponseEntity.ok("Done");
     }
+    @GetMapping("/settleUp")
+    public ResponseEntity settleUp(){
+        List<TransactionDTO> transactionDTOS = groupService.settleUp();
+        return ResponseEntity.ok(transactionDTOS);
+    }
 }

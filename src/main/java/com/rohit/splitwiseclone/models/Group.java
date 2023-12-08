@@ -9,12 +9,12 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Entity
+@Entity(name = "SplitWise_Group")
 @Data
 public class Group extends BaseModel {
     private String name;
     private String description;
-    @ManyToMany
+    @ManyToMany (mappedBy = "group")
     private List<User> users;
     @ManyToMany
     private List<Expense> expenses;
